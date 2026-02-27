@@ -89,3 +89,16 @@ double SurvivalChance(int total){
     return 33.0;
   }
 }
+
+bool ShouldRun(int zombiesBehindYou){ // determining whether or not to run from the amount of zombies
+  if(zombiesBehindYou > 3){
+    return true;
+  }
+  else{
+    return false;
+  }
+}
+
+void Warn(){
+  cout<<"RUN! The zombies are catching up to you!"<<endl;
+}
