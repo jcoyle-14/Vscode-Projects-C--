@@ -28,10 +28,23 @@ using namespace std;
 
 // Function declarations go here...
 void printIntro();
+double AverageZombie(int days);
+int TotalZombies(int days);
+double SurvivalChance(int total);
+bool ShouldRun(int zombiesBehindYou);
+void Warn();
+
+
 
 int main() {
     cout << "=== SPRING BREAK ZOMBIE SURVIVAL HELPER ===" << endl;
     printIntro();
+    
+    int days;
+    int total;
+    double chance;
+    int behind;
+
 
     
 
@@ -43,4 +56,18 @@ void printIntro(){
   cout<<"But suddenly, zombie outbreak sirens start blaring!!"<<endl;
   cout<<"You decide to track zombie sightings and estimate your chance of survival."<<endl;
   cout<<"Lets begin!\n"<<endl;
+}
+
+double AverageZombie(int days) {
+  int total = 0;
+  for(int i =0; i< days; ++i){
+    int zombies = rand() %10;
+    total += zombies;
+  }
+  
+  return(double)total / days;
+  
+}
+int totalZombies(int randZombie) {
+  
 }
