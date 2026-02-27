@@ -26,7 +26,21 @@ int main(){
     
     PrintWelcome();
     
-    
+    while(running == 1){
+        PrintStats(health, attack);
+        int path = GetValidChoice();
+
+        if(path ==1){
+            DoFight(attack,defense);
+        }
+        else if (path == 2){
+            DoRest(health);
+        }
+        else if (path == 3){
+            DoQuit(running);
+        }
+    }
+    return 0;
 }
 
 void PrintWelcome(){
@@ -117,4 +131,12 @@ void DoFight(int attack, int defense){
     else{
         DisplayNotCritical();
     }
+}
+void DoRest(int& health){
+    ApplyRest(health);
+    DisplayRestMessage();
+}
+void DoQuit(int& running){
+    DisplayQuitMessage();
+    running = 0;
 }
