@@ -77,3 +77,15 @@ int totalZombies(int days) {
   }
   return total;
 }
+
+double SurvivalChance(int total){
+  if(total < 10){
+    return 90.0;
+  }
+  if(total <30){
+    return 67.0;
+  }
+  else{
+    return 33.0;
+  }
+}
