@@ -35,7 +35,7 @@ bool ShouldRun(int zombiesBehindYou);
 void Warn();
 
 
-
+/*Just needing to finish up main with user prompts*/
 int main() {
     cout << "=== SPRING BREAK ZOMBIE SURVIVAL HELPER ===" << endl;
     printIntro();
