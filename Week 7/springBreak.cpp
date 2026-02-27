@@ -68,6 +68,12 @@ double AverageZombie(int days) {
   return(double)total / days;
   
 }
-int totalZombies(int randZombie) {
-  
+int totalZombies(int days) {
+  int total = 0;
+
+  for(int i =0; i <days; i++){
+    int zombie = rand() %10;
+    total += zombie;
+  }
+  return total;
 }
