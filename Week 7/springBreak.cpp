@@ -41,10 +41,24 @@ int main() {
     printIntro();
     
     int days;
-    int total;
-    double chance;
-    int behind;
+    cout<<"How many days were you at the beach?: "<<endl;
+    cin>>days;
 
+    int total = TotalZombies(days);
+    cout<<"Total zombies seen: "<<total<<endl;
+
+    double average = AverageZombie(days);
+    cout<<"Average zombies per day: "<<average<<endl;
+
+    double chance;
+    cout<<"Estimated survival chance: "<<SurvivalChance(total);
+
+
+    int behind;
+    cout<<"How many zombies are behind you?: "<<endl;
+    cin>>behind;
+
+    /*Needs a checker for if you should run or not*/
 
     
 
@@ -58,7 +72,7 @@ void printIntro(){
   cout<<"Lets begin!\n"<<endl;
 }
 
-double AverageZombie(int days) {
+double AverageZombie(int days) { //Finding avg zombie
   int total = 0;
   for(int i =0; i< days; ++i){
     int zombies = rand() %10;
@@ -68,7 +82,7 @@ double AverageZombie(int days) {
   return(double)total / days;
   
 }
-int totalZombies(int days) {
+int totalZombies(int days) { //Increment total zombies randomly
   int total = 0;
 
   for(int i =0; i <days; i++){
@@ -78,7 +92,7 @@ int totalZombies(int days) {
   return total;
 }
 
-double SurvivalChance(int total){
+double SurvivalChance(int total){// Determine survival chance
   if(total < 10){
     return 90.0;
   }
