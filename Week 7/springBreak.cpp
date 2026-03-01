@@ -59,7 +59,12 @@ int main() {
     cin>>behind;
 
     /*Needs a checker for if you should run or not*/
-
+    if (ShouldRun(behind)){
+      Warn();
+    }
+    else{
+      cout<<"You are safe for now..."<<endl;
+    }
     
 
     return 0;
