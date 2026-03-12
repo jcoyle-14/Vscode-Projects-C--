@@ -51,7 +51,7 @@ int main() {
     cout<<"Average zombies per day: "<<average<<endl;
 
     double chance;
-    cout<<"Estimated survival chance: "<<SurvivalChance(total);
+    cout<<"Estimated survival chance: "<<SurvivalChance(total)<<endl;
 
 
     int behind;
@@ -87,7 +87,7 @@ double AverageZombie(int days) { //Finding avg zombie
   return(double)total / days;
   
 }
-int totalZombies(int days) { //Increment total zombies randomly
+int TotalZombies(int days) { //Increment total zombies randomly
   int total = 0;
 
   for(int i =0; i <days; i++){
