@@ -12,7 +12,7 @@ void purchaseTicket(double &wallet, double price){
 
 void purchaseTicket(double &wallet , int quantity, double price){
     double total = quantity * price;
-    if(wallet < price)
+    if(wallet < total)
         cout<< "Transaction Declined";
         return;
 
